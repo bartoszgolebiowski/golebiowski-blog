@@ -24,7 +24,7 @@ const BasicLayout = (page) => {
           flexDirection: "row",
           maxWidth: 768,
           margin: "0 auto",
-          padding: "2rem 0",
+          padding: "2rem",
         }}
       >
         {page}
