@@ -1,40 +1,35 @@
-/** @jsxImportSource theme-ui */
-
 import Link from "next/link";
-import { Box } from "theme-ui";
 
 const BasicLayout = (page) => {
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
       }}
     >
-      <Box
-        as="header"
-        sx={{
-          px: 3,
+      <header
+        style={{
+          padding: "0 2rem",
         }}
       >
         <h1>
           <Link href="/">Golebiowski blog</Link>
         </h1>
-      </Box>
-      <Box
-        as="main"
-        sx={{
+      </header>
+      <main
+        style={{
           flex: "1 1 auto",
           flexDirection: "row",
           maxWidth: 768,
-          mx: "auto",
-          p: 3,
+          margin: "0 auto",
+          padding: "2rem 0",
         }}
       >
         {page}
-      </Box>
-    </Box>
+      </main>
+    </div>
   );
 };
 

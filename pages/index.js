@@ -1,5 +1,3 @@
-/** @jsxImportSource theme-ui */
-
 import Link from "next/link";
 import Head from "next/head";
 import { getAllPosts } from "../lib/get-all-posts";
@@ -20,7 +18,7 @@ export default function Home(props) {
               <Link href={`/blog/${article.slug}`}>{article.title}</Link>
             </h2>
             <p>{article.excerpt}</p>
-            <p sx={{ textAlign: "end" }}>{article.author}</p>
+            <p style={{ textAlign: "end" }}>{article.author}</p>
           </li>
         ))}
       </ul>

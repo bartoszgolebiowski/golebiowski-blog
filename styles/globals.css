@@ -1,16 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro");
+
 html,
 body {
-  padding: 0;
+  position: relative;
+  min-height: 100%;
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.65;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 320px;
+  direction: ltr;
+  font-feature-settings: "kern";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  color: #0074de;
+  -webkit-text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }

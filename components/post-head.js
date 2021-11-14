@@ -4,15 +4,15 @@ export default function PostHead({ post }) {
   return (
     <Head>
       <title>{post.title}</title>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={post.description} />
       <meta name="image" content={post.image} />
       <meta name="keywords" content={post.keywords} />
 
-      <meta itemprop="name" content={post.title} />
-      <meta itemprop="description" content={post.description} />
-      <meta itemprop="image" content={post.image} />
+      <meta itemProp="name" content={post.title} />
+      <meta itemProp="description" content={post.description} />
+      <meta itemProp="image" content={post.image} />
 
       <meta name="og:title" content={post.ogTitle} />
       <meta name="og:description" content={post.ogDescription} />
