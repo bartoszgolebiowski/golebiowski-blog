@@ -12,12 +12,12 @@ twitterCard: 'summary'
 twitterSite: '@BartoszEbiowski'
 twitterTitle: 'React multistep form with validation'
 twitterDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante turpis. Integer tellus ipsum, varius in leo eget, euismod'
-twitterImage: 'http://golebiowski-blok.com/blog/react-multistep-form/twitter-cover.png'
+twitterImage: 'https://golebiowski-blog.vercel.app/blog/react-multistep-form/twitter-cover.png'
 
 ogTitle: 'React multistep form with validation'
 ogDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante turpis. Integer tellus ipsum, varius in leo eget, euismod' 
-ogImage: 'http://golebiowski-blok.com/blog/react-multistep-form/og-cover.png'
-ogURL: 'http://golebiowski-blok.com/blog/react-multistep-form'
+ogImage: 'https://golebiowski-blog.vercel.app/blog/react-multistep-form/og-cover.png'
+ogURL: 'https://golebiowski-blog.vercel.app/blog/react-multistep-form'
 ogSiteName: 'Golebiowski blog'
 ---
 
