@@ -33,3 +33,27 @@ Managing multistep forms can be cumbersome, especially when we add custom valida
 
 In this article I would like to share my solution to handle complex multistep forms.
 I will use [React](https://github.com/facebook/react), [Formik](https://github.com/formium/formik) as form library, and [Yup](https://github.com/jquense/yup) as validation library. 
+
+# Demo
+
+[Sandbox](https://codesandbox.io/s/practical-payne-0fkkp?file=/src/App.tsx)
+
+[Github Gist](https://gist.github.com/bartoszgolebiowski/ed7ce444a0fe1c2acf13a7b2dcec7463)
+
+# Scenario
+
+Let's assume the following example.
+The user has picked up some items from our site and wants to finalize the order. Unfortunately, the user does not have an account, so he needs to fill up address information before purchasing articles. 
+
+So the form will consist of three steps:
+- First step, the user will provide basic personal details.
+- Second step, the user will provide address details.
+- Last step, the user will provide credit card details. 
+  
+The user should have the possibility to navigate between steps. 
+
+![Multistep form vizualization](/public/blog/react-multistep-form/multistep-scenario.png)
+
+Every step should have validation, to minimalize possible issues with corrupted input data. The form should inform the user if provided data is not valid. 
+
+The form should contain information about the current step like the title and how many steps are left. It should improve the user experience.
