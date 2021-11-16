@@ -52,7 +52,7 @@ So the form will consist of three steps:
   
 The user should have the possibility to navigate between steps. 
 
-![Multistep form vizualization](/public/blog/react-multistep-form/multistep-scenario.png)
+![Multistep form vizualization](/blog/react-multistep-form/multistep-scenario.png)
 
 Every step should have validation, to minimalize possible issues with corrupted input data. The form should inform the user if provided data is not valid. 
 
