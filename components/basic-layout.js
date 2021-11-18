@@ -1,17 +1,23 @@
+/** @jsxImportSource theme-ui */
+
 import Link from "next/link";
+import SubscribeFooter from "./subscribe-footer";
 
 const BasicLayout = (page) => {
   return (
     <div
-      style={{
+      sx={{
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
       }}
     >
       <header
-        style={{
-          padding: "0 2rem",
+        sx={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          px: 4,
         }}
       >
         <h1>
@@ -19,7 +25,7 @@ const BasicLayout = (page) => {
         </h1>
       </header>
       <main
-        style={{
+        sx={{
           flex: "1 1 auto",
           flexDirection: "row",
           maxWidth: 768,
@@ -29,6 +35,13 @@ const BasicLayout = (page) => {
       >
         {page}
       </main>
+      <footer
+        sx={{
+          width: "100%",
+        }}
+      >
+        <SubscribeFooter />
+      </footer>
     </div>
   );
 };

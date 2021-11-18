@@ -1,8 +1,11 @@
+/** @jsxImportSource theme-ui */
+
 import Link from "next/link";
 import Head from "next/head";
 import { Feed } from "feed";
 import fs from "fs";
 import { getAllPosts } from "../lib/get-all-posts";
+import SubscribeFooter from "../components/subscribe-footer";
 
 export default function Home(props) {
   const { articles } = props;
@@ -13,7 +16,7 @@ export default function Home(props) {
         <title>Golebiowski Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ul>
+      <ul sx={{ padding: 0, listStyle: "none", pb: 4 }}>
         {articles.map((article) => (
           <li key={article.title}>
             <h2>
