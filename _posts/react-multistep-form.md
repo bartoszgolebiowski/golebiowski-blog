@@ -12,15 +12,15 @@ date: '2021-11-14T13:25:52.919Z'
 author: Bartosz Golebiowski
 
 twitterCard: 'summary'
-twitterSite: '@BartoszEbiowski'
+twitterSite: '@bgolebiowski24'
 twitterTitle: 'React multistep form with validation'
 twitterDescription: 'In this article, I would like to share my solution to handle complex multistep forms. I will use React as UI library, Formik as form library, and Yup as validation library.'
-twitterImage: 'https://golebiowski-blog.vercel.app/blog/react-multistep-form/twitter-cover.png'
+twitterImage: 'https://bgolebiowski.com/blog/react-multistep-form/twitter-cover.png'
 
 ogTitle: 'React multistep form with validation'
 ogDescription: 'In this article, I would like to share my solution to handle complex multistep forms. I will use React as UI library, Formik as form library, and Yup as validation library.' 
-ogImage: 'https://golebiowski-blog.vercel.app/blog/react-multistep-form/og-cover.png'
-ogURL: 'https://golebiowski-blog.vercel.app/blog/react-multistep-form'
+ogImage: 'https://bgolebiowski.com/blog/react-multistep-form/og-cover.png'
+ogURL: 'https://bgolebiowski.com/blog/react-multistep-form'
 ogSiteName: 'Golebiowski blog'
 ---
 
@@ -56,4 +56,4 @@ The user should have the possibility to navigate between steps.
 
 Every step should have validation, to minimalize possible issues with corrupted input data. The form should inform the user if provided data is not valid. 
 
-The form should contain information about the current step like the title and how many steps are left. It should improve the user experience.
+The form should contain information about the current step like the title and how many steps are left. It should improve the user experience. 

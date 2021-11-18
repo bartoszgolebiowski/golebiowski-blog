@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
+import { Feed } from "feed";
+import fs from "fs";
 import { getAllPosts } from "../lib/get-all-posts";
 
 export default function Home(props) {
@@ -26,8 +28,62 @@ export default function Home(props) {
   );
 }
 
+const generateRSSFeed = (articles) => {
+  const baseUrl = "https://bgolebiowski.com";
+  const author = {
+    name: "Bartosz Golebiowski",
+    email: "contact@bgolebiowski.com",
+    link: "https://twitter.com/bgolebiowski24",
+  };
+
+  // Construct a new Feed object
+  const feed = new Feed({
+    title: "Articles by Bartosz Golebiowski",
+    description:
+      "Blog with articles about frontend technology, react, micro-frontends, single-spa",
+    id: baseUrl,
+    link: baseUrl,
+    language: "en",
+    feedLinks: {
+      rss2: `${baseUrl}/rss.xml`,
+    },
+    author,
+  });
+
+  articles.forEach((post) => {
+    const {
+      title,
+      excerpt,
+      keywords,
+      content,
+      coverImage,
+      date,
+      author,
+      slug,
+    } = post;
+    const url = `${baseUrl}/blog/${slug}`;
+
+    feed.addItem({
+      title,
+      id: url,
+      link: url,
+      description: excerpt,
+      content,
+      author: [author],
+      date: new Date(date),
+      image: coverImage,
+      category: keywords,
+    });
+  });
+
+  fs.writeFileSync("public/rss.xml", feed.rss2());
+};
+
 export const getStaticProps = async () => {
   const articles = await getAllPosts();
+  articles.sort((a, b) => (new Date(a.date) < new Date(b.date) ? 1 : -1));
+
+  generateRSSFeed(articles);
 
   return {
     props: {
