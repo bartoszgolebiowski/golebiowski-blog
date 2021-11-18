@@ -9,22 +9,18 @@ export default function PostHead({ post }) {
       <meta name="description" content={post.description} />
       <meta name="image" content={post.image} />
       <meta name="keywords" content={post.keywords} />
-
       <meta itemProp="name" content={post.title} />
       <meta itemProp="description" content={post.description} />
       <meta itemProp="image" content={post.image} />
-
       <meta name="og:title" content={post.ogTitle} />
       <meta name="og:description" content={post.ogDescription} />
       <meta name="og:image" content={post.ogImage} />
       <meta name="og:url" content={post.ogUrl} />
       <meta name="og:site_name" content={post.ogSiteName} />
       <meta name="og:type" content="Article" />
-
       <meta name="article:section" content="Technology" />
       <meta name="article:author" content={post.author} />
       <meta name="article:tag" content={post.keywords} />
-
       <meta name="twitter:card" content={post.twitterCard} />
       <meta name="twitter:site" content={post.twitterSite} />
       <meta name="twitter:title" content={post.twitterTitle} />
