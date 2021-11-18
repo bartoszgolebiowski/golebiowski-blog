@@ -1,10 +1,10 @@
-import { Button, Box } from "theme-ui";
+import { Button, Box, Heading } from "theme-ui";
 
 export default function SubscribeFooter() {
   return (
     <Box sx={{ textAlign: "center", py: 4 }}>
       <h1>
-        Sign up for our newsletter to get the latest news and updates from us.
+        Sign up for our newsletter to get the latest news and updates from me.
       </h1>
       <hr />
       <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
