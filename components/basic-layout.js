@@ -29,7 +29,9 @@ const BasicLayout = (page) => {
           flex: "1 1 auto",
           flexDirection: "row",
           maxWidth: 768,
-          margin: "0 auto",
+          "@media screen and (min-width: 768px)": {
+            margin: "0 auto",
+          },
           padding: "2rem",
         }}
       >

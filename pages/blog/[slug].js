@@ -18,8 +18,8 @@ export default function Post({ post }) {
     <>
       <PostHead post={post} />
       <article
-        style={{
-          marginBottom: "2rem",
+        sx={{
+          mb: "2rem",
         }}
       >
         <PostHeader post={post} />
