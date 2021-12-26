@@ -5,7 +5,6 @@ import Head from "next/head";
 import { Feed } from "feed";
 import fs from "fs";
 import { getAllPosts } from "../lib/get-all-posts";
-import SubscribeFooter from "../components/subscribe-footer";
 
 export default function Home(props) {
   const { articles } = props;
@@ -23,7 +22,7 @@ export default function Home(props) {
               <Link href={`/blog/${article.slug}`}>{article.title}</Link>
             </h2>
             <p>{article.excerpt}</p>
-            <p style={{ textAlign: "end" }}>{article.author}</p>
+            <p sx={{ textAlign: "end" }}>{article.author}</p>
           </li>
         ))}
       </ul>
