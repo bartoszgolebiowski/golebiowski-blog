@@ -143,5 +143,126 @@ const App = () => {
 };
 ```
 
-At first glance, the SingleStep component does not do anything. It just renders children. But we pass some additional props which we will use in another component responsible for managing multiple SingleStep components. [Accessing Children Components/Nodes](https://www.reactenlightenment.com/basic-react-components/6.8.html)
+At first glance, the SingleStep component does not do anything. It just renders children. But we pass some additional props which we will use in another component responsible for managing multiple SingleStep components. [Accessing Children Components/Nodes](https://www.reactenlightenment.com/basic-react-components/6.8.html).
+**onSubmit** will be invoked whenever the user successfully filled up the form and submit SingleStep. **validationSchema** will be used for validation SingleStep's form. When validation will pass, the user can submit the form. 
 
+the Component used for collecting SingleStep components is called MultistepForm. 
+
+```tsx
+const MultistepForm: React.FC<FormikConfig<Values>> = (props) => {
+  const [snap, setSnap] = React.useState<Values>(props.initialValues);
+  const [step, setStep] = React.useState(0);
+  const steps = React.Children.toArray(props.children) as React.ReactElement<
+    SingleStep
+  >[];
+  const currentStep = steps[step];
+  const stepProps = currentStep.props;
+
+  const nextPage = (value: Values) => {
+    setSnap(value);
+    setStep(step + 1);
+  };
+
+  const prevPage = (value: Values) => {
+    setSnap(value);
+    setStep(step - 1);
+  };
+
+  const hasPrev = step !== 0;
+  const hasNext = step !== steps.length - 1;
+
+  const handleSubmit = (value: Values, helper: FormikHelpers<Values>) => {
+    if (stepProps.onSubmit) {
+      stepProps.onSubmit(value, helper);
+    }
+    if (!hasNext) {
+      props.onSubmit(value, helper);
+    } else {
+      nextPage(value);
+    }
+  };
+
+  return (
+    <Formik
+      initialValues={snap}
+      onSubmit={handleSubmit}
+      validationSchema={stepProps.validationSchema}
+    >
+      {(formik) => (
+        <Form>
+          <Flex>
+            <Text>{currentStep.props.label}</Text>
+            <Text>{step + 1}/{steps.length}</Text>
+          </Flex>
+          {currentStep}
+          <Flex>
+            {hasPrev ? (
+              <Button onClick={() => prevPage(formik.values)}>
+                Previous
+              </Button>
+            ) : null}
+            <Button type="submit">
+              {hasNext ? "Next" : "Submit"}
+            </Button>
+          </Flex>
+        </Form>
+      )}
+    </Formik>
+  );
+};
+```
+
+It is responsible for assembling SingleStep react's components. It also provides meta-information about the current form step number and basic functionality responsible for navigation between SingleStep components. The MultistepForm component sustains all SingleStep form values. The user can freely navigate through all form steps and values will persist.
+It also extracts "onSubmit" and "validationSchema" props from the SingleStep component and injects them into Formik Component. Due to that our application will dynamically change Formik properties. 
+
+This is how we combine all components to provide multi-step form functionality.
+
+```tsx
+        <MultistepForm
+          initialValues={initialValues}
+          onSubmit={(value, helper) => {
+            alert(JSON.stringify(value, null, 2));
+          }}
+        >
+          <SingleStep
+            label="Person details"
+            onSubmit={(values, helper) =>
+              console.log("completed step number 1")
+            }
+            validationSchema={() => {
+              return Yup.object().shape({...});
+            }}
+          >
+            <FieldInput name="firstName"/>
+            <FieldInput name="lastName"/>
+          </SingleStep>
+          <SingleStep
+            label="Location details"
+            onSubmit={(values, helper) =>
+              console.log("completed step number 2")
+            }
+            validationSchema={() => {
+              return Yup.object().shape({...});
+            }}
+          >
+            <FieldInput name="email"/>
+            <FieldInput name="phone"/>
+          </SingleStep>
+          <SingleStep
+            label="Card details"
+            onSubmit={(values, helper) =>
+              console.log("completed step number 3")
+            }
+            validationSchema={() => {
+              return Yup.object().shape({...});
+            }}
+          >
+            <FieldInput name="cardNumber"/>
+            <FieldInput name="cardExpiry"/>
+            <FieldInput name="cardCVC"/>
+          </SingleStep>
+        </MultistepForm>
+```
+
+Whenever the user passes validation **validationSchema** for a single step and submits form **onSubmit** will be invoked. 
+This MultistepForm can be used not only for creating new items but also works for editing purposes. It requires passing to the **initialValues** object with any values. 
