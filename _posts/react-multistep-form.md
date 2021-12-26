@@ -67,7 +67,7 @@ The first component we will create is a simple input field.
 It will consist of a single label, a single input, and logic for displaying errors. 
 
 
-```JSX
+```TSX
 import {
   Label,
   Input,
@@ -101,7 +101,7 @@ const FieldInput = ({ label, ...props }: Field) => {
 
 With this element, we can create a component responsible for containing inputs for a single step. To provide the best [accessibility](https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly) I put input as a child of label component. 
 
-```JSX
+```TSX
 import * as React from "react";
 import { FormikConfig, FormikHelpers} from "formik";
 

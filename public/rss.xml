@@ -4,7 +4,7 @@
         <title>Articles by Bartosz Golebiowski</title>
         <link>https://bgolebiowski.com</link>
         <description>Blog with articles about frontend technology, react, micro-frontends, single-spa</description>
-        <lastBuildDate>Sun, 26 Dec 2021 11:01:37 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 26 Dec 2021 11:21:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -58,7 +58,7 @@ The first component we will create is a simple input field.
 It will consist of a single label, a single input, and logic for displaying errors. 
 
 
-```JSX
+```TSX
 import {
   Label,
   Input,
@@ -92,7 +92,7 @@ const FieldInput = ({ label, ...props }: Field) => {
 
 With this element, we can create a component responsible for containing inputs for a single step. To provide the best [accessibility](https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly) I put input as a child of label component. 
 
-```JSX
+```TSX
 import * as React from "react";
 import { FormikConfig, FormikHelpers} from "formik";
 

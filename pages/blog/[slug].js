@@ -1,6 +1,9 @@
 import React from "react";
 import ErrorPage from "next/error";
 import { useRouter } from "next/router";
+import { Box } from "theme-ui";
+import hljs from 'highlight.js';
+import javascript from 'highlight.js/lib/languages/javascript';
 import { getPostBySlug } from "../../lib/get-single-post";
 import { getAllPosts } from "../../lib/get-all-posts";
 import { markdownToHtml } from "../../lib/markdown-to-html";
@@ -8,8 +11,15 @@ import PostHead from "../../components/post-head";
 import PostHeader from "../../components/post-header";
 import PostBody from "../../components/post-body";
 
+hljs.registerLanguage('javascript', javascript);
+
 export default function Post({ post }) {
   const router = useRouter();
+
+  React.useEffect(() => {
+    hljs.initHighlighting();
+  }, []);
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -17,14 +27,15 @@ export default function Post({ post }) {
   return (
     <>
       <PostHead post={post} />
-      <article
+      <Box
+        as="article"
         sx={{
           mb: "2rem",
         }}
       >
         <PostHeader post={post} />
         <PostBody post={post} />
-      </article>
+      </Box>
     </>
   );
 }

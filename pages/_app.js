@@ -2,6 +2,7 @@ import { ThemeProvider } from "@theme-ui/theme-provider";
 import BasicLayout from "../components/basic-layout";
 import theme from "../components/theme";
 import "../styles/globals.css";
+import 'highlight.js/styles/default.css';
 
 export default function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout ?? ((page) => BasicLayout(page));
