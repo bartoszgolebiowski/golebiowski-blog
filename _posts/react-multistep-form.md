@@ -9,7 +9,7 @@ Starting from a simple contact form to a complex multistep order form.
 Managing multistep forms can be cumbersome, especially when we add custom validation.'
 image: '/blog/react-multistep-form/cover.png'
 date: '2021-11-14T13:25:52.919Z'
-author: Bartosz Golebiowski
+author: 'Bartosz Golebiowski'
 
 twitterCard: 'summary'
 twitterSite: '@bgolebiowski24'
@@ -32,14 +32,11 @@ Starting from a simple contact form to a complex multistep order form.
 Managing multistep forms can be cumbersome, especially when we add custom validation. 
 
 In this article I would like to share my solution to handle complex multistep forms.
-I will use [React](https://github.com/facebook/react), [Formik](https://github.com/formium/formik) as form library, and [Yup](https://github.com/jquense/yup) as validation library. 
-
+We will use [React](https://github.com/facebook/react), [Formik](https://github.com/formium/formik) as form library, and [Yup](https://github.com/jquense/yup) as validation library. 
+Testing framework [Jest](https://github.com/facebook/jest), and [React Testing Library](https://github.com/testing-library/react-testing-library).
 # Demo
 
-[Sandbox](https://codesandbox.io/s/practical-payne-0fkkp?file=/src/App.tsx)
-
-[Github Gist](https://gist.github.com/bartoszgolebiowski/ed7ce444a0fe1c2acf13a7b2dcec7463)
-
+[Sandbox](https://codesandbox.io/s/peaceful-wilson-pckxl)
 # Use case
 
 Let's assume the following example.
@@ -67,7 +64,7 @@ The first component we will create is a simple input field.
 It will consist of a single label, a single input, and logic for displaying errors. 
 
 
-```TSX
+```tsx
 import {
   Label,
   Input,
@@ -99,9 +96,9 @@ const FieldInput = ({ label, ...props }: Field) => {
 };
 ```
 
-With this element, we can create a component responsible for containing inputs for a single step. To provide the best [accessibility](https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly) I put input as a child of label component. 
+With this element, we can create a component responsible for containing inputs for a single step. To provide the best [accessibility](https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly) we put input as a child of label component. 
 
-```TSX
+```tsx
 import * as React from "react";
 import { FormikConfig, FormikHelpers} from "formik";
 
@@ -144,9 +141,7 @@ const App = () => {
 ```
 
 At first glance, the SingleStep component does not do anything. It just renders children. But we pass some additional props which we will use in another component responsible for managing multiple SingleStep components. [Accessing Children Components/Nodes](https://www.reactenlightenment.com/basic-react-components/6.8.html).
-**onSubmit** will be invoked whenever the user successfully filled up the form and submit SingleStep. **validationSchema** will be used for validation SingleStep's form. When validation will pass, the user can submit the form. 
-
-the Component used for collecting SingleStep components is called MultistepForm. 
+**onSubmit** will be invoked whenever the user successfully filled up the form and submit SingleStep. **validationSchema** will be used for validation SingleStep's form. When validation will pass, the user can submit the form. The Component used for collecting SingleStep components is called MultistepForm. 
 
 ```tsx
 const MultistepForm: React.FC<FormikConfig<Values>> = (props) => {
@@ -213,56 +208,127 @@ const MultistepForm: React.FC<FormikConfig<Values>> = (props) => {
 ```
 
 It is responsible for assembling SingleStep react's components. It also provides meta-information about the current form step number and basic functionality responsible for navigation between SingleStep components. The MultistepForm component sustains all SingleStep form values. The user can freely navigate through all form steps and values will persist.
-It also extracts "onSubmit" and "validationSchema" props from the SingleStep component and injects them into Formik Component. Due to that our application will dynamically change Formik properties. 
+It also extracts **onSubmit** and **validationSchema** props from the SingleStep component and injects them into Formik Component. Due to that our application will dynamically change Formik properties. 
 
 This is how we combine all components to provide multi-step form functionality.
 
 ```tsx
-        <MultistepForm
-          initialValues={initialValues}
-          onSubmit={(value, helper) => {
-            alert(JSON.stringify(value, null, 2));
-          }}
-        >
-          <SingleStep
-            label="Person details"
-            onSubmit={(values, helper) =>
-              console.log("completed step number 1")
-            }
-            validationSchema={() => {
-              return Yup.object().shape({...});
-            }}
-          >
-            <FieldInput name="firstName"/>
-            <FieldInput name="lastName"/>
-          </SingleStep>
-          <SingleStep
-            label="Location details"
-            onSubmit={(values, helper) =>
-              console.log("completed step number 2")
-            }
-            validationSchema={() => {
-              return Yup.object().shape({...});
-            }}
-          >
-            <FieldInput name="email"/>
-            <FieldInput name="phone"/>
-          </SingleStep>
-          <SingleStep
-            label="Card details"
-            onSubmit={(values, helper) =>
-              console.log("completed step number 3")
-            }
-            validationSchema={() => {
-              return Yup.object().shape({...});
-            }}
-          >
-            <FieldInput name="cardNumber"/>
-            <FieldInput name="cardExpiry"/>
-            <FieldInput name="cardCVC"/>
-          </SingleStep>
-        </MultistepForm>
+<MultistepForm
+  initialValues={initialValues}
+  onSubmit={(value, helper) => {
+    alert(JSON.stringify(value, null, 2));
+  }}
+>
+  <SingleStep
+    label="Person details"
+    onSubmit={(values, helper) =>
+      console.log("completed step number 1")
+    }
+    validationSchema={() => {
+      return Yup.object().shape({...});
+    }}
+  >
+    <FieldInput name="firstName"/>
+    <FieldInput name="lastName"/>
+  </SingleStep>
+  <SingleStep
+    label="Location details"
+    onSubmit={(values, helper) =>
+      console.log("completed step number 2")
+    }
+    validationSchema={() => {
+      return Yup.object().shape({...});
+    }}
+  >
+    <FieldInput name="email"/>
+    <FieldInput name="phone"/>
+  </SingleStep>
+  <SingleStep
+    label="Card details"
+    onSubmit={(values, helper) =>
+      console.log("completed step number 3")
+    }
+    validationSchema={() => {
+      return Yup.object().shape({...});
+    }}
+  >
+    <FieldInput name="cardNumber"/>
+    <FieldInput name="cardExpiry"/>
+    <FieldInput name="cardCVC"/>
+  </SingleStep>
+</MultistepForm>
 ```
 
 Whenever the user passes validation **validationSchema** for a single step and submits form **onSubmit** will be invoked. 
 This MultistepForm can be used not only for creating new items but also works for editing purposes. It requires passing to the **initialValues** object with any values. 
+
+Currently, we have a solution for one specific multiform. It would be pretty hard to reuse it in other use cases. To resolve this situation, we can use [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html). 
+
+```tsx
+interface Props<T> extends FormikConfig<T> {}
+
+const MultistepForm = <T extends object>(props: Props<T>) => {
+  const [snap, setSnap] = React.useState<T>(props.initialValues);
+  const [step, setStep] = React.useState(0);
+  const steps = React.Children.toArray(props.children) as React.ReactElement<
+    SingleStepProps<T>
+  >[];
+  const currentStep = steps[step];
+  const stepProps = currentStep.props;
+
+  const nextPage = (value: T) => {...};
+  const prevPage = (value: T) => {...};
+  const handleSubmit = (value: T, helper: FormikHelpers<T>) => {...};
+
+  return ...
+}
+```
+
+Similar changes for SingleStepForm component types. 
+
+```tsx
+export interface Props<T> {
+  validationSchema: FormikConfig<T>["validationSchema"];
+  onSubmit: FormikConfig<T>["onSubmit"];
+  label: string;
+  children: React.ReactNode;
+}
+
+const SingleStepForm = <T extends object>(props: Props<T>) => {
+  return <>{props.children}</>;
+};
+```
+
+Modern IDE will understand interfaces and types, and we can take advantage of [IntelliSense](https://en.wikipedia.org/wiki/IntelliSense).
+
+# Testing
+
+To provide stable functionality we should create some [tests](https://kentcdodds.com/blog/write-tests#write-tests).
+Out tests scenario should include:
+1. The correct label for inputs for a specific single-step.
+2. The correct metadata like title and step counter.
+3. The single-step validation.
+4. The navigation.
+
+## The correct label for inputs for a specific single-step.
+
+Simple static testing. We will not interact with our multi-step form. Every single step should have tests to make sure that title, counter and inputs are correct. 
+
+```jsx
+it("should render person details with empty values and correct step number", async () => {
+  render(
+    <ContactForm
+      onSubmitFirstStep={onSubmitFirstStep}
+      onSubmitSecondStep={onSubmitSecondStep}
+      onSubmitThirdStep={onSubmitThirdStep}
+      onSubmitFinal={onSubmitFinal}
+    />
+  );
+  expect(screen.getByText(/Person details/i)).toBeInTheDocument();
+  expect(
+    screen.getByRole("contentinfo", { name: "step-1" })
+  ).toBeInTheDocument();
+  expect(screen.getByLabelText(/first name/i)).toHaveValue("");
+  expect(screen.getByLabelText(/last name/i)).toHaveValue("");
+});
+```

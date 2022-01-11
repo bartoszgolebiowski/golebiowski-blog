@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-
+import Image from "next/image";
 import Link from "next/link";
 import SubscribeFooter from "./subscribe-footer";
 
@@ -20,8 +20,14 @@ const BasicLayout = (page) => {
           px: 4,
         }}
       >
-        <h1>
-          <Link href="/">Golebiowski blog</Link>
+        <h1 sx={{ position: "relative", minHeight: "5rem" }}>
+          <Link href="/">
+            <img
+              src="/title.svg"
+              height={"150"}
+              sx={{ position: "absolute", cursor: "pointer" }}
+            />
+          </Link>
         </h1>
       </header>
       <main
