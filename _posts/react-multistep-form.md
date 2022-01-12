@@ -308,22 +308,15 @@ Out tests scenario should include:
 1. The correct label for inputs for a specific single-step.
 2. The correct metadata like title and step counter.
 3. The single-step validation.
-4. The navigation.
+4. The integration.
 
-## The correct label for inputs for a specific single-step.
+## The correct label for inputs for a specific single-step and The correct metadata like title and step counter.
 
 Simple static testing. We will not interact with our multi-step form. Every single step should have tests to make sure that title, counter and inputs are correct. 
 
 ```jsx
 it("should render person details with empty values and correct step number", async () => {
-  render(
-    <ContactForm
-      onSubmitFirstStep={onSubmitFirstStep}
-      onSubmitSecondStep={onSubmitSecondStep}
-      onSubmitThirdStep={onSubmitThirdStep}
-      onSubmitFinal={onSubmitFinal}
-    />
-  );
+  render(<ContactForm {...props}/>);
   expect(screen.getByText(/Person details/i)).toBeInTheDocument();
   expect(
     screen.getByRole("contentinfo", { name: "step-1" })
@@ -332,3 +325,99 @@ it("should render person details with empty values and correct step number", asy
   expect(screen.getByLabelText(/last name/i)).toHaveValue("");
 });
 ```
+
+## The single-step validation.
+
+Testing with a small amount of interaction. First, we check if validation works correctly for empty fields. Second tests test case with valid input form values. This initial input form values are provided via **initialValues** property. 
+It is important to check existing elements via [**getBy...**](https://testing-library.com/docs/queries/about/#types-of-queries) and non existing elements via [**queryBy...**](https://testing-library.com/docs/queries/about/#types-of-queries) Using **get** throws an error when an element was not found, but **query** returns null. 
+
+```jsx
+ it("should not redirect to next step when step is not filled", async () => {
+   render(<ContactForm {...props}/>);
+
+   userEvent.click(screen.getByRole("button", { name: "Next" }));
+   await waitFor(() =>
+     expect(screen.queryAllByText(/required/i)).toHaveLength(2)
+   );
+ });
+
+ it("should render person details with filled values, next button should redirect to next step", async () => {
+   const initialValues: Values = {
+     ...defaultInitialValues,
+     firstName: "John",
+     lastName: "Doe",
+   };
+
+   render(<ContactForm {...props} initialValues={initialValues}/>);
+
+   expect(screen.getByLabelText(/first name/i)).toHaveValue(
+     initialValues.firstName
+   );
+   expect(screen.getByLabelText(/last name/i)).toHaveValue(
+     initialValues.lastName
+   );
+   userEvent.click(screen.getByRole("button", { name: "Next" }));
+   expect(screen.queryAllByText(/required/i)).toHaveLength(0);
+ });
+```
+
+## The integration.
+
+It checks the whole component from start to end. This test contains all features covered like navigation and interacting with every single step form with assertions for metadata, function invocation, and so on. 
+
+```jsx
+ it("should be possible to fill all steps and submit form", async () => {
+   const exampleValues: Values = {
+     firstName: "John",
+     lastName: "Doe",
+     code: "de8c7627dd023b4ee4f4eca10ca8871962c42f49d9c3103c2be135f7b94ca048",
+     email: "john.snow@gmail.com",
+     phone: "+48123456789",
+     cardNumber: "123456789012",
+     cardExpiry: "12/20",
+     cardCVC: "123",
+   };
+
+   render(<ContactForm {...props} />);
+   const type = async (element: HTMLElement, value: string) => {
+     userEvent.type(element, value);
+     await screen.findByDisplayValue(value); 
+   };
+
+   await type(screen.getByLabelText(/first name/i), exampleValues.firstName);
+   await type(screen.getByLabelText(/last name/i), exampleValues.lastName);
+   userEvent.click(screen.getByRole("button", { name: "Next" }));
+   await waitForElementToBeRemoved(() =>
+     screen.queryByText(/Person details/i)
+   );
+   expect(onSubmitFirstStep).toBeCalled();
+
+   await type(screen.getByLabelText(/code/i), exampleValues.code);
+   await type(screen.getByLabelText(/email/i), exampleValues.email);
+   await type(screen.getByLabelText(/phone/i), exampleValues.phone);
+   userEvent.click(screen.getByRole("button", { name: "Next" }));
+   await waitForElementToBeRemoved(() =>
+     screen.queryByText(/location details/i)
+   );
+   expect(onSubmitSecondStep).toBeCalled();
+
+   await type(
+     screen.getByLabelText(/card number/i),
+     exampleValues.cardNumber
+   );
+   await type(
+     screen.getByLabelText(/card expiry/i),
+     exampleValues.cardExpiry
+   );
+   await type(screen.getByLabelText(/card cvc/i), exampleValues.cardCVC);
+   userEvent.click(screen.getByRole("button", { name: /submit/i }));
+   await waitFor(() => expect(onSubmitThirdStep).toBeCalled());
+   expect(onSubmitFinal.mock.calls[0][0]).toStrictEqual(exampleValues);
+});
+```
+
+A thing worth mentioning here is function **type**. It is responsible for filling up selected input. It also contains some [assertion](https://github.com/testing-library/user-event/issues/424#issuecomment-669270822). This assertion is used to remove  **Warning: An update to App inside a test was not wrapped in act(...).** from console after running tests. More information about this warning [here](https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning).
+
+## Final thougth
+
+I hope you have enjoyed it. Thank you for your time. 
