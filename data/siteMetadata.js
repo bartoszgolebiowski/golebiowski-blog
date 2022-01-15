@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'bgolebiowski',
+  title: 'bgolebiowski blog',
   author: 'Bartosz Golebiowski',
-  headerTitle: 'bgolebiowski blog',
+  headerTitle: 'Golebiowski blog',
   description: 'Blog with articles about frontend technology, react, micro-frontends, single-spa',
   language: 'en-us',
   theme: 'system', // system, dark or light
