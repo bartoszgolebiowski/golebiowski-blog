@@ -1,15 +1,26 @@
-import { ThemeProvider } from "@theme-ui/theme-provider";
-import BasicLayout from "../components/basic-layout";
-import theme from "../components/theme";
-import "../styles/globals.css";
-import 'highlight.js/styles/default.css';
+import '@/css/tailwind.css'
+import '@/css/prism.css'
 
-export default function MyApp({ Component, pageProps }) {
-  const getLayout = Component.getLayout ?? ((page) => BasicLayout(page));
+import { ThemeProvider } from 'next-themes'
+import Head from 'next/head'
 
+import siteMetadata from '@/data/siteMetadata'
+import LayoutWrapper from '@/components/LayoutWrapper'
+import { ClientReload } from '@/components/ClientReload'
+
+const isDevelopment = process.env.NODE_ENV === 'development'
+const isSocket = process.env.SOCKET
+
+export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      {getLayout(<Component {...pageProps} />)}
+    <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
+      <Head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+      </Head>
+      {isDevelopment && isSocket && <ClientReload />}
+      <LayoutWrapper>
+        <Component {...pageProps} />
+      </LayoutWrapper>
     </ThemeProvider>
-  );
+  )
 }
