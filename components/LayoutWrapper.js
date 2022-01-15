@@ -1,3 +1,4 @@
+import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from './Link'
@@ -14,9 +15,16 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <Link href="/" aria-label="Bartosz Golebiowski blog">
               <div className="flex items-center justify-between">
-                <div className="mr-3 flex w-96 h-28 fill-zinc-800 dark:fill-white">
+                <div className="mr-3 flex w-14 h-14 fill-zinc-800 dark:fill-white">
                   <Logo />
                 </div>
+                {typeof siteMetadata.headerTitle === 'string' ? (
+                  <div className="hidden h-6 text-2xl font-semibold sm:block">
+                    {siteMetadata.headerTitle}
+                  </div>
+                ) : (
+                  siteMetadata.headerTitle
+                )}
               </div>
             </Link>
           </div>
