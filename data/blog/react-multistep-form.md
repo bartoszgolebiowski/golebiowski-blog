@@ -16,7 +16,7 @@ We are using them to collect information from users.
 Starting from a simple contact form to a complex multistep order form.
 Managing multistep forms can be cumbersome, especially when we add custom validation.
 
-In this article I would like to share my solution to handle complex multistep forms.
+In this article, I would like to share my solution to handle complex multistep forms.
 We will use [React](https://github.com/facebook/react), [Formik](https://github.com/formium/formik) as form library, and [Yup](https://github.com/jquense/yup) as validation library.
 Testing framework [Jest](https://github.com/facebook/jest), and [React Testing Library](https://github.com/testing-library/react-testing-library).
 
@@ -52,13 +52,6 @@ The first component we will create is a simple input field.
 It will consist of a single label, a single input, and logic for displaying errors.
 
 ```tsx
-import { Label, Input, InputProps, Text, Flex } from '@theme-ui/components'
-import { useField } from 'formik'
-
-interface Field extends InputProps {
-  label: string
-}
-
 const FieldInput = ({ label, ...props }: Field) => {
   const [field, meta] = useField(props)
   const shouldDisplay = meta.touched && meta.error
@@ -78,9 +71,6 @@ const FieldInput = ({ label, ...props }: Field) => {
 With this element, we can create a component responsible for containing inputs for a single step. To provide the best [accessibility](https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly) we put input as a child of label component.
 
 ```tsx
-import * as React from 'react'
-import { FormikConfig, FormikHelpers } from 'formik'
-
 type Values = {
   firstName: string
   lastName: string
@@ -376,4 +366,4 @@ A thing worth mentioning here is function **type**. It is responsible for fillin
 
 ## Final thougth
 
-I hope you have enjoyed it. Thank you for your time.
+This is solution is highly robust and can be used as a based for more complex forms.
