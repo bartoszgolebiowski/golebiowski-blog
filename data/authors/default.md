@@ -1,7 +1,7 @@
 ---
 name: Bartosz Golebiowski
 avatar: /static/avatar.png
-occupation: Frontend developer
+occupation: Solution architect
 company: Bartosz golebiowski bargol usługi it
 email: contact@bgolebiowski.com
 twitter: https://twitter.com/BartoszEbiowski
@@ -13,4 +13,4 @@ I solve tough problems.
 
 —
 
-I am a solution architect for a few related software products. I have been in the IT industry for over 5 years.
+I am a solution architect for a few related software products. I have been in the IT industry for over 4 years.
