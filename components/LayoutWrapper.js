@@ -30,6 +30,14 @@ const LayoutWrapper = ({ children }) => {
           </div>
           <div className="flex items-center text-base leading-5">
             <div className="hidden sm:block">
+              <Link
+                href="https://bmgk.tech"
+                target="_blank"
+                className="p-1 font-bold sm:p-4"
+                style={{ color: '#33691e' }}
+              >
+                BMGK.tech
+              </Link>
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}

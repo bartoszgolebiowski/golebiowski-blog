@@ -58,6 +58,16 @@ const MobileNav = () => {
           onClick={onToggleNav}
         ></button>
         <nav className="fixed h-full mt-8">
+          <div className="px-12 py-4">
+            <Link
+              href="https://bmgk.tech"
+              target="_blank"
+              className="text-2xl font-bold tracking-widest"
+              style={{ color: '#33691e' }}
+            >
+              BMGK.tech
+            </Link>
+          </div>
           {headerNavLinks.map((link) => (
             <div key={link.title} className="px-12 py-4">
               <Link
