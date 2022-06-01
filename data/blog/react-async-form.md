@@ -1,5 +1,5 @@
 ---
-title: 'React async form'
+title: 'React async form with single selection'
 date: '2022-03-20'
 tags: ['form', 'testing', 'swr', 'caching', 'tree', 'msw', 'hooks']
 draft: false
