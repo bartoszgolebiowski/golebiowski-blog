@@ -15,6 +15,9 @@ const siteMetadata = {
   linkedin: 'https://www.linkedin.com/in/bartosz-go%C5%82%C4%99biowski-12723a159/',
   github: 'https://github.com/bartoszgolebiowski',
   locale: 'en-US',
+  analytics: {
+    googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID, // e.g. UA-000000-2 or G-XXXXXXX
+  },
   comment: {
     // Select a provider and use the environment variables associated to it
     // https://vercel.com/docs/environment-variables
