@@ -1,6 +1,6 @@
 ---
 title: 'React async edit form with multiple selection'
-date: '2022-01-08'
+date: '2023-01-08'
 tags: ['form', 'tree', 'testing', 'async', 'react-query', 'selectors', 'immer']
 draft: false
 summary: 'Lazy loaded options allow users to search and select options from a list without the need to load all the options at once. This can be especially useful for forms with a large number of options or for options that are constantly changing.
