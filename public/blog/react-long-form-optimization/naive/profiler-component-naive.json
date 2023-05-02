@@ -1,0 +1,330 @@
+[
+  {
+    "actualDuration": 55.60000002384186,
+    "baseDuration": 55.300000071525574
+  },
+  {
+    "actualDuration": 61,
+    "baseDuration": 59.99999988079071
+  },
+  {
+    "actualDuration": 0,
+    "baseDuration": 59.99999988079071
+  },
+  {
+    "actualDuration": 77,
+    "baseDuration": 76.19999980926514
+  },
+  {
+    "actualDuration": 53.40000009536743,
+    "baseDuration": 52.90000009536743
+  },
+  {
+    "actualDuration": 57.89999997615814,
+    "baseDuration": 57.39999997615814
+  },
+  {
+    "actualDuration": 58.699999928474426,
+    "baseDuration": 58.59999990463257
+  },
+  {
+    "actualDuration": 60.799999952316284,
+    "baseDuration": 60.30000019073486
+  },
+  {
+    "actualDuration": 59.300000071525574,
+    "baseDuration": 58.89999997615814
+  },
+  {
+    "actualDuration": 57.39999985694885,
+    "baseDuration": 56.700000047683716
+  },
+  {
+    "actualDuration": 59.799999952316284,
+    "baseDuration": 59.799999952316284
+  },
+  {
+    "actualDuration": 55.89999997615814,
+    "baseDuration": 55.39999985694885
+  },
+  {
+    "actualDuration": 53.799999952316284,
+    "baseDuration": 53.50000011920929
+  },
+  {
+    "actualDuration": 53.5,
+    "baseDuration": 53.39999997615814
+  },
+  {
+    "actualDuration": 54.200000047683716,
+    "baseDuration": 54.00000023841858
+  },
+  {
+    "actualDuration": 54.700000047683716,
+    "baseDuration": 54.40000021457672
+  },
+  {
+    "actualDuration": 55.5,
+    "baseDuration": 55.299999952316284
+  },
+  {
+    "actualDuration": 52.89999997615814,
+    "baseDuration": 52.699999928474426
+  },
+  {
+    "actualDuration": 52.90000009536743,
+    "baseDuration": 52.700000047683716
+  },
+  {
+    "actualDuration": 53.39999997615814,
+    "baseDuration": 53.09999990463257
+  },
+  {
+    "actualDuration": 54.09999990463257,
+    "baseDuration": 54.09999990463257
+  },
+  {
+    "actualDuration": 53.699999928474426,
+    "baseDuration": 53.699999928474426
+  },
+  {
+    "actualDuration": 54,
+    "baseDuration": 53.89999997615814
+  },
+  {
+    "actualDuration": 53.60000002384186,
+    "baseDuration": 53.60000002384186
+  },
+  {
+    "actualDuration": 53.200000047683716,
+    "baseDuration": 53.200000047683716
+  },
+  {
+    "actualDuration": 53.5,
+    "baseDuration": 53
+  },
+  {
+    "actualDuration": 52.89999997615814,
+    "baseDuration": 52.800000071525574
+  },
+  {
+    "actualDuration": 53.40000009536743,
+    "baseDuration": 53.200000166893005
+  },
+  {
+    "actualDuration": 53.299999952316284,
+    "baseDuration": 53.09999990463257
+  },
+  {
+    "actualDuration": 54,
+    "baseDuration": 53.89999997615814
+  },
+  {
+    "actualDuration": 53.59999990463257,
+    "baseDuration": 53.39999985694885
+  },
+  {
+    "actualDuration": 53.10000002384186,
+    "baseDuration": 53
+  },
+  {
+    "actualDuration": 53.09999990463257,
+    "baseDuration": 52.99999988079071
+  },
+  {
+    "actualDuration": 53.800000071525574,
+    "baseDuration": 53.60000002384186
+  },
+  {
+    "actualDuration": 53.09999990463257,
+    "baseDuration": 52.89999997615814
+  },
+  {
+    "actualDuration": 52.89999997615814,
+    "baseDuration": 52.799999952316284
+  },
+  {
+    "actualDuration": 52.699999928474426,
+    "baseDuration": 52.59999990463257
+  },
+  {
+    "actualDuration": 53.09999990463257,
+    "baseDuration": 53.09999990463257
+  },
+  {
+    "actualDuration": 53,
+    "baseDuration": 52.799999952316284
+  },
+  {
+    "actualDuration": 53.300000071525574,
+    "baseDuration": 52.90000021457672
+  },
+  {
+    "actualDuration": 53,
+    "baseDuration": 52.800000071525574
+  },
+  {
+    "actualDuration": 52.90000009536743,
+    "baseDuration": 52.90000009536743
+  },
+  {
+    "actualDuration": 53.09999990463257,
+    "baseDuration": 52.89999997615814
+  },
+  {
+    "actualDuration": 52.799999833106995,
+    "baseDuration": 52.799999833106995
+  },
+  {
+    "actualDuration": 53.00000011920929,
+    "baseDuration": 52.90000021457672
+  },
+  {
+    "actualDuration": 53.199999928474426,
+    "baseDuration": 53.199999928474426
+  },
+  {
+    "actualDuration": 53.10000002384186,
+    "baseDuration": 52.699999928474426
+  },
+  {
+    "actualDuration": 53.200000047683716,
+    "baseDuration": 52.89999997615814
+  },
+  {
+    "actualDuration": 52.60000014305115,
+    "baseDuration": 52.50000023841858
+  },
+  {
+    "actualDuration": 53.799999952316284,
+    "baseDuration": 53.49999988079071
+  },
+  {
+    "actualDuration": 52.89999997615814,
+    "baseDuration": 52.89999997615814
+  },
+  {
+    "actualDuration": 52.700000047683716,
+    "baseDuration": 52.60000014305115
+  },
+  {
+    "actualDuration": 52.39999997615814,
+    "baseDuration": 52.09999990463257
+  },
+  {
+    "actualDuration": 54.300000071525574,
+    "baseDuration": 54.300000071525574
+  },
+  {
+    "actualDuration": 52.699999928474426,
+    "baseDuration": 52.59999990463257
+  },
+  {
+    "actualDuration": 52.60000002384186,
+    "baseDuration": 52.60000002384186
+  },
+  {
+    "actualDuration": 57,
+    "baseDuration": 56.700000047683716
+  },
+  {
+    "actualDuration": 56,
+    "baseDuration": 55.700000047683716
+  },
+  {
+    "actualDuration": 55.699999928474426,
+    "baseDuration": 55.699999928474426
+  },
+  {
+    "actualDuration": 55.200000047683716,
+    "baseDuration": 55.10000002384186
+  },
+  {
+    "actualDuration": 54.199999928474426,
+    "baseDuration": 54
+  },
+  {
+    "actualDuration": 53.39999997615814,
+    "baseDuration": 53.39999997615814
+  },
+  {
+    "actualDuration": 52.89999997615814,
+    "baseDuration": 52.59999990463257
+  },
+  {
+    "actualDuration": 55,
+    "baseDuration": 55
+  },
+  {
+    "actualDuration": 54.39999997615814,
+    "baseDuration": 54.10000014305115
+  },
+  {
+    "actualDuration": 61.09999990463257,
+    "baseDuration": 60.89999997615814
+  },
+  {
+    "actualDuration": 53,
+    "baseDuration": 52.89999997615814
+  },
+  {
+    "actualDuration": 53.49999988079071,
+    "baseDuration": 53.39999985694885
+  },
+  {
+    "actualDuration": 53.39999997615814,
+    "baseDuration": 53.09999990463257
+  },
+  {
+    "actualDuration": 53.200000047683716,
+    "baseDuration": 53
+  },
+  {
+    "actualDuration": 53,
+    "baseDuration": 53
+  },
+  {
+    "actualDuration": 52.799999952316284,
+    "baseDuration": 52.700000047683716
+  },
+  {
+    "actualDuration": 52.89999997615814,
+    "baseDuration": 52.89999997615814
+  },
+  {
+    "actualDuration": 52.40000021457672,
+    "baseDuration": 52.00000047683716
+  },
+  {
+    "actualDuration": 52.700000047683716,
+    "baseDuration": 52.60000014305115
+  },
+  {
+    "actualDuration": 52.799999952316284,
+    "baseDuration": 52.799999952316284
+  },
+  {
+    "actualDuration": 53,
+    "baseDuration": 52.799999952316284
+  },
+  {
+    "actualDuration": 55.300000071525574,
+    "baseDuration": 55.10000002384186
+  },
+  {
+    "actualDuration": 53.200000047683716,
+    "baseDuration": 52.89999997615814
+  },
+  {
+    "actualDuration": 61.60000002384186,
+    "baseDuration": 61.5
+  },
+  {
+    "actualDuration": 81.10000014305115,
+    "baseDuration": 80.60000014305115
+  },
+  {
+    "actualDuration": 89.5,
+    "baseDuration": 88.99999988079071
+  }
+]

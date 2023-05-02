@@ -1,0 +1,6 @@
+method,actualDuration,baseDuration
+naive,54.65,55.18
+memo,5.60,67.99
+useMemo,16.62,55.27
+debounce,57.46,57.08
+wizard,13.52,13.46

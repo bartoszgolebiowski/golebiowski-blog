@@ -1,0 +1,730 @@
+[
+  {
+    "actualDuration": 25.299999952316284,
+    "baseDuration": 91.99999976158142
+  },
+  {
+    "actualDuration": 6.399999976158142,
+    "baseDuration": 93.39999985694885
+  },
+  {
+    "actualDuration": 5.800000071525574,
+    "baseDuration": 92.89999985694885
+  },
+  {
+    "actualDuration": 8.600000023841858,
+    "baseDuration": 79.39999985694885
+  },
+  {
+    "actualDuration": 5.700000047683716,
+    "baseDuration": 76.59999978542328
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 76.39999973773956
+  },
+  {
+    "actualDuration": 4.100000023841858,
+    "baseDuration": 77.69999980926514
+  },
+  {
+    "actualDuration": 6.600000023841858,
+    "baseDuration": 77.39999985694885
+  },
+  {
+    "actualDuration": 6,
+    "baseDuration": 76.99999976158142
+  },
+  {
+    "actualDuration": 6.600000023841858,
+    "baseDuration": 77.39999973773956
+  },
+  {
+    "actualDuration": 6,
+    "baseDuration": 76.89999973773956
+  },
+  {
+    "actualDuration": 5.899999976158142,
+    "baseDuration": 76.69999969005585
+  },
+  {
+    "actualDuration": 5.700000047683716,
+    "baseDuration": 76.69999980926514
+  },
+  {
+    "actualDuration": 6,
+    "baseDuration": 76.99999976158142
+  },
+  {
+    "actualDuration": 5.799999952316284,
+    "baseDuration": 76.69999969005585
+  },
+  {
+    "actualDuration": 5.599999904632568,
+    "baseDuration": 76.59999966621399
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 76.49999976158142
+  },
+  {
+    "actualDuration": 5.599999904632568,
+    "baseDuration": 76.59999966621399
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 76.299999833107
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 76.49999976158142
+  },
+  {
+    "actualDuration": 5.699999928474426,
+    "baseDuration": 76.69999969005585
+  },
+  {
+    "actualDuration": 6,
+    "baseDuration": 76.99999976158142
+  },
+  {
+    "actualDuration": 5.5000001192092896,
+    "baseDuration": 76.49999988079071
+  },
+  {
+    "actualDuration": 5.4999998807907104,
+    "baseDuration": 76.49999964237213
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 76.39999973773956
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 76.49999976158142
+  },
+  {
+    "actualDuration": 5.599999904632568,
+    "baseDuration": 76.49999964237213
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 76.49999988079071
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 76.59999978542328
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 76.59999978542328
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 76.39999973773956
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 76.39999973773956
+  },
+  {
+    "actualDuration": 5.599999904632568,
+    "baseDuration": 76.59999966621399
+  },
+  {
+    "actualDuration": 6,
+    "baseDuration": 76.99999976158142
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 76.49999976158142
+  },
+  {
+    "actualDuration": 5.6000001430511475,
+    "baseDuration": 76.59999990463257
+  },
+  {
+    "actualDuration": 6,
+    "baseDuration": 76.89999973773956
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 76.59999978542328
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 76.2999997138977
+  },
+  {
+    "actualDuration": 5.5000001192092896,
+    "baseDuration": 76.39999985694885
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 76.49999976158142
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 76.39999973773956
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 76.299999833107
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 76.49999976158142
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 76.19999969005585
+  },
+  {
+    "actualDuration": 5.200000166893005,
+    "baseDuration": 76.19999992847443
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 76.59999978542328
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 76.39999973773956
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 76.39999973773956
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 76.2999997138977
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 76.39999973773956
+  },
+  {
+    "actualDuration": 7.199999928474426,
+    "baseDuration": 65.99999976158142
+  },
+  {
+    "actualDuration": 5.599999904632568,
+    "baseDuration": 64.49999976158142
+  },
+  {
+    "actualDuration": 5.599999904632568,
+    "baseDuration": 64.49999976158142
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 64.19999992847443
+  },
+  {
+    "actualDuration": 5.699999928474426,
+    "baseDuration": 64.49999988079071
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 64.49999988079071
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 64.29999995231628
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 64.49999988079071
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 64.39999997615814
+  },
+  {
+    "actualDuration": 5.799999952316284,
+    "baseDuration": 64.59999990463257
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 64.29999995231628
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.699999928474426,
+    "baseDuration": 64.49999988079071
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 64.49999988079071
+  },
+  {
+    "actualDuration": 5.6000001430511475,
+    "baseDuration": 64.5
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 64.19999992847443
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.700000047683716,
+    "baseDuration": 64.49999988079071
+  },
+  {
+    "actualDuration": 5.599999904632568,
+    "baseDuration": 64.49999976158142
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 64.49999988079071
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 64.49999988079071
+  },
+  {
+    "actualDuration": 5.700000047683716,
+    "baseDuration": 64.59999990463257
+  },
+  {
+    "actualDuration": 6.099999904632568,
+    "baseDuration": 64.89999973773956
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 64.19999992847443
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.200000047683716,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 6.100000023841858,
+    "baseDuration": 64.99999988079071
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 64.29999995231628
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.199999928474426,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.200000047683716,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.100000023841858,
+    "baseDuration": 63.99999988079071
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 64.29999995231628
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 64.29999995231628
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.199999928474426,
+    "baseDuration": 63.99999976158142
+  },
+  {
+    "actualDuration": 5.200000047683716,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.199999928474426,
+    "baseDuration": 63.99999976158142
+  },
+  {
+    "actualDuration": 5.200000047683716,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.799999952316284,
+    "baseDuration": 64.69999980926514
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 64.10000002384186
+  },
+  {
+    "actualDuration": 5.4999998807907104,
+    "baseDuration": 64.2999997138977
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.200000047683716,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.100000023841858,
+    "baseDuration": 63.99999988079071
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.19999992847443
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 64.19999992847443
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 63.99999988079071
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.100000023841858,
+    "baseDuration": 63.89999985694885
+  },
+  {
+    "actualDuration": 5.1000001430511475,
+    "baseDuration": 63.89999997615814
+  },
+  {
+    "actualDuration": 5.700000047683716,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 64.19999992847443
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.699999928474426,
+    "baseDuration": 64.49999976158142
+  },
+  {
+    "actualDuration": 5.400000095367432,
+    "baseDuration": 64.19999992847443
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.199999928474426,
+    "baseDuration": 63.799999952316284
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.199999928474426,
+    "baseDuration": 63.799999833106995
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 63.99999988079071
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 63.99999988079071
+  },
+  {
+    "actualDuration": 5.200000047683716,
+    "baseDuration": 63.99999988079071
+  },
+  {
+    "actualDuration": 5.100000023841858,
+    "baseDuration": 63.89999985694885
+  },
+  {
+    "actualDuration": 5.699999928474426,
+    "baseDuration": 64.49999976158142
+  },
+  {
+    "actualDuration": 5.599999904632568,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.4999998807907104,
+    "baseDuration": 64.2999997138977
+  },
+  {
+    "actualDuration": 5.700000166893005,
+    "baseDuration": 64.5
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.600000023841858,
+    "baseDuration": 64.39999985694885
+  },
+  {
+    "actualDuration": 5.5,
+    "baseDuration": 64.299999833107
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 64.09999990463257
+  },
+  {
+    "actualDuration": 5.200000047683716,
+    "baseDuration": 63.89999985694885
+  },
+  {
+    "actualDuration": 5.200000047683716,
+    "baseDuration": 63.99999988079071
+  },
+  {
+    "actualDuration": 5.0000001192092896,
+    "baseDuration": 63.799999952316284
+  },
+  {
+    "actualDuration": 5.200000047683716,
+    "baseDuration": 63.99999988079071
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 63.99999988079071
+  },
+  {
+    "actualDuration": 5.399999976158142,
+    "baseDuration": 64.19999980926514
+  },
+  {
+    "actualDuration": 5.199999928474426,
+    "baseDuration": 63.99999976158142
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 63.99999976158142
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 64.09999978542328
+  },
+  {
+    "actualDuration": 5.100000023841858,
+    "baseDuration": 63.89999985694885
+  },
+  {
+    "actualDuration": 5.299999952316284,
+    "baseDuration": 63.99999976158142
+  },
+  {
+    "actualDuration": 5.300000071525574,
+    "baseDuration": 64.09999990463257
+  }
+]
