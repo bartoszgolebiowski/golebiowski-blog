@@ -103,7 +103,7 @@ Here is the [sourcecode](https://github.com/bartoszgolebiowski/react-long-form/b
 (54.65 - 16.62) / 54.65 * 100% = 0.6975 * 100% = 69.75%
 ```
 
-## Mutlistep form
+## Multistep form
 
 The third optimization method we'll explore is the multistep form. This is a form that is split into multiple steps, with each step containing a subset of the form fields. This is a common pattern in web applications, and it's particularly useful for long forms. By splitting the form into multiple steps, we can reduce the number of fields that need to be rendered at any given time, which can significantly improve performance. Unfortunately, this apporach requires the approvement of the client, so it is not always possible to implement it.
 
