@@ -10,10 +10,10 @@ summary: 'Learn how to optimize complex long forms in React using memoization, u
 
 If you've worked with React and long, complex forms before, you might have encountered performance issues caused by too many rerenders. In this article, we'll examine a example of a complex form with some render issues and explore four optimization methods to make it perform better:
 
-- [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)
 - [memo](https://reactjs.org/docs/react-api.html#reactmemo)
-- [Debounce](https://www.npmjs.com/package/debounce)
+- [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)
 - Multistep Forms
+- [Debounce](https://www.npmjs.com/package/debounce)
 
 We'll explain each approach and show you how to implement them in your code.
 
