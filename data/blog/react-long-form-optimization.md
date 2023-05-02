@@ -134,7 +134,7 @@ The third optimization method we'll explore is the multistep form. This is a for
 
 ![multistep-form](/blog/react-long-form-optimization/wizard/render.png?style=centerme)
 
-Here is the [sourcecode](https://github.com/bartoszgolebiowski/react-long-form/blob/main/src/vanilla/Wizard.tsx) and profiling [data](/blog/react-long-form-optimization/wizard/profiling-data.05-02-2023.13-30-48.json) for multistep approach. You can load it into the React Profiler to see the results. Single rerender takes around 13.52ms in production build. This is a 89.78% improvement over the naive approach.
+Here is the [sourcecode](https://github.com/bartoszgolebiowski/react-long-form/blob/main/src/vanilla/Wizard.tsx) and profiling [data](/blog/react-long-form-optimization/wizard/profiling-data.05-02-2023.13-30-48.json) for multistep approach. You can load it into the React Profiler to see the results. Single rerender takes around 13.52ms in production build. This is a 75.31% improvement over the naive approach.
 
 ```
 (54.65 - 13.52) / 54.65 * 100% = 0.7531 * 100% = 75.31%
@@ -146,8 +146,6 @@ Debounce is particularly useful for input fields, where the user is likely to ty
 
 To implement debounce in our complex long form, we first had to switch the controlled input components to uncontrolled. Then we set the state of the form using the debounce function. By doing this, we were able to reduce the number of times the form rerendered and improve the performance of the application.
 
-It's worth noting that debounce is not a silver bullet for performance optimization, and it's important to use it judiciously. If the debounce time is set too long, it can cause the user to experience lag when typing, while a debounce time that is too short may not significantly improve performance. Finding the right balance is key.
-
 ![Debounce-form](/blog/react-long-form-optimization/debounce/render.png?style=centerme)
 
 Here is the [sourcecode](https://github.com/bartoszgolebiowski/react-long-form/blob/main/src/vanilla/Debounce.tsx) and profiling [data](/blog/react-long-form-optimization/debounce/profiling-data.05-02-2023.13-08-00.json) for naive approach. You can load it into the React Profiler to see the results. Single rerender takes around 55ms in production build. In this case, debounce does not reduce the time of single rerender, but reduce the number of rerenders.
@@ -157,6 +155,6 @@ Here is the [sourcecode](https://github.com/bartoszgolebiowski/react-long-form/b
 ![conclusion-chart](/blog/react-long-form-optimization/actualDuration.png?style=centerme)
 [Results](/blog/react-long-form-optimization/mean.csv) of all approaches, naive, memo, useMemo, multistep and debounce for production build. I used the [Profiler API](https://pl.legacy.reactjs.org/docs/profiler.html) to measure the time of single rerender. React version [17.0.2](https://www.npmjs.com/package/react/v/17.0.2) and React DOM version [17.0.2](https://www.npmjs.com/package/react-dom/v/17.0.2).
 
-In this article, we explored four different approaches to optimizing a complex long form. We started with a naive approach, which rendered the entire form on every change. Then we explored three different optimization methods: memo, useMemo, multistep and deboucne. Each of these methods has its own advantages and disadvantages, and it's important to understand the tradeoffs involved in each approach. By understanding these tradeoffs, we can make informed decisions about which approach is best for our application.
+In this article, we explored four different approaches to optimizing a complex long form. We started with a naive approach, which rerenderes the entire form on every change. Then we explored four different optimization methods: memo, useMemo, multistep and deboucne. Each of these methods has its own advantages and disadvantages, and it's important to understand the tradeoffs involved in each approach. By understanding these tradeoffs, we can make informed decisions about which approach is best for our application.
 
 From my experience, the best approach is to wrap input components in memo. This approach is the easiest to implement and provides the best performance improvement. If you have a complex form with many fields, you can also consider using useMemo or multistep. These approaches are more complex to implement, but they can provide significant performance improvements. As last resort, you can use debounce, but it is not recommended. It is better to use it only for input fields, where the user is likely to type quickly, causing multiple onChange events to be triggered.
