@@ -19,6 +19,10 @@ We'll explain each approach and show you how to implement them in your code.
 
 Let's dive in!
 
+# Demo
+
+[Sandbox](https://codesandbox.io/p/github/bartoszgolebiowski/react-long-form/main?workspaceId=fd0b0a2c-04b1-49fb-ab9c-5b409574ffdd)
+
 ## The naive approach
 
 In the first section, we'll take a look at the naive approach to building a long and complex form in React. This approach involves using the built-in useState hook to store the state of the form, and deriving the errors from the form state. We'll be creating a form with 25 inputs, including basic inputs, selects, and a complex input that adds items to an array. The form also has complex validation logic and an HTTP requests for data. This form is too complex to be created as an uncontrolled component. To keep things simple, we'll be building everything with vanilla React, without using any third-party libraries.
@@ -35,18 +39,18 @@ React.memo is a [higher-order component](https://legacy.reactjs.org/docs/higher-
 
 The React.memo function takes two arguments: the first argument is the component to be memoized, and the second argument is an optional comparison function. The comparison function is used to determine whether the component should be rerendered or not. If the comparison function returns true, the component will not be rerendered. If it returns false, the component will be rerendered.
 
+By default, React.memo will perform a shallow comparison of the component's props to determine whether it should be rerendered. However, if the props are complex objects, this shallow comparison may not be sufficient. In such cases, you can provide a custom comparison function as the second argument to React.memo that performs a deep comparison of the props. This way, you can ensure that the component only rerenders when the relevant props have actually changed. I use memo to memoize individual inputs of the form.
+
+While using the React.memo, there were a few issues that had to be addressed.  
+Firstly, inline event handlers change their reference on every re-render, so it is recommended to use the [useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback) hook to deal with this. However, if the event handler is only using setState, it can be skipped in the dependency array of useMemo.  
+Secondly, memoizing components with children can be difficult. In such cases, we need to first memoize the children components before memoizing the parent component.
+
 ```jsx
 const TextFieldMemo = React.memo(
   TextField,
   (prev, next) => prev.value === next.value && prev.error === next.error
 )
 ```
-
-By default, React.memo will perform a shallow comparison of the component's props to determine whether it should be rerendered. However, if the props are complex objects, this shallow comparison may not be sufficient. In such cases, you can provide a custom comparison function as the second argument to React.memo that performs a deep comparison of the props. This way, you can ensure that the component only rerenders when the relevant props have actually changed. I use memo to memoize individual inputs of the form.
-
-While using the React.memo, there were a few issues that had to be addressed.  
-Firstly, inline event handlers change their reference on every re-render, so it is recommended to use the [useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback) hook to deal with this. However, if the event handler is only using setState, it can be skipped in the dependency array of useMemo.  
-Secondly, memoizing components with children can be difficult. In such cases, we need to first memoize the children components before memoizing the parent component.
 
 ![memo-form](/blog/react-long-form-optimization/memo/render.png?style=centerme)
 
@@ -128,7 +132,7 @@ The third optimization method we'll explore is the multistep form. This is a for
 </Wizard>
 ```
 
-![multistep-form](/blog/react-long-form-optimization/memo/render.png?style=centerme)
+![multistep-form](/blog/react-long-form-optimization/wizard/render.png?style=centerme)
 
 Here is the [sourcecode](https://github.com/bartoszgolebiowski/react-long-form/blob/main/src/vanilla/Wizard.tsx) and profiling [data](/blog/react-long-form-optimization/wizard/profiling-data.05-02-2023.13-30-48.json) for multistep approach. You can load it into the React Profiler to see the results. Single rerender takes around 13.52ms in production build. This is a 89.78% improvement over the naive approach.
 
