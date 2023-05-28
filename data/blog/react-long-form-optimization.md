@@ -148,7 +148,7 @@ To implement debounce in our complex long form, we first had to switch the contr
 
 ![Debounce-form](/blog/react-long-form-optimization/debounce/render.png?style=centerme)
 
-Here is the [sourcecode](https://github.com/bartoszgolebiowski/react-long-form/blob/main/src/vanilla/Debounce.tsx) and profiling [data](/blog/react-long-form-optimization/debounce/profiling-data.05-02-2023.13-08-00.json) for naive approach. You can load it into the React Profiler to see the results. Single rerender takes around 55ms in production build. In this case, debounce does not reduce the time of single rerender, but reduce the number of rerenders.
+Here is the [sourcecode](https://github.com/bartoszgolebiowski/react-long-form/blob/main/src/vanilla/Debounce.tsx) and profiling [data](/blog/react-long-form-optimization/debounce/profiling-data.05-02-2023.13-08-00.json) for debounce approach. You can load it into the React Profiler to see the results. Single rerender takes around 55ms in production build. In this case, debounce does not reduce the time of single rerender, but reduce the number of rerenders.
 
 ## Conclusion
 
