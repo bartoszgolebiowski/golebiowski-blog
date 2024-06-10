@@ -22,7 +22,7 @@ In case of a [concurrent execution](https://docs.aws.amazon.com/lambda/latest/dg
 
 Let's consider a scenario where an API fetches data from an external source. This data is relatively static and doesn't change frequently. Instead of fetching the data from the external source every time the API is called, we can cache the data in the ephemeral storage of the Lambda function. This approach can reduce the API calls' latency and improve the application's overall performance.
 
-![Mermaid flowchart cache](/blog/import-map-introduction/mermaid.png?style=centerme)
+![Mermaid flowchart cache](/blog/lambda-simple-cache-with-ephemeral-storage/mermaid.png?style=centerme)
 
 ## Lambda Function
 
