@@ -8,6 +8,9 @@ summary: 'Coding agents run in autonomous loops that compound token costs in way
 
 # Introduction
 
+> [!NOTE]
+> This article is a written paraphrase of the presentation [How to write code using fewer tokens with coding agents](https://token-consumption.vercel.app/#1). You can check it out to get familiar with the slides.
+
 When developers first start using coding agents such as GitHub Copilot Agent Mode, Cursor, Claude Code, or [Cline](https://github.com/cline/cline), the token bill can come as a surprise. A task that looks like a simple one-liner prompt can quietly consume hundreds of thousands of tokens in the background. Understanding why this happens is the first step toward doing something about it.
 
 This article covers:

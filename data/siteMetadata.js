@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'Blog with articles about frontend technology, react, micro-frontends, single-spa',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://bgolebiowski.com/',
+  siteUrl: 'https://bgolebiowski.com',
   siteRepo: 'https://github.com/bartoszgolebiowski/golebiowski-blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
