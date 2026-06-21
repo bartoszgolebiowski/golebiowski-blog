@@ -2,6 +2,9 @@
   "name": "golebiowski-blog",
   "version": "0.1.0",
   "private": false,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
